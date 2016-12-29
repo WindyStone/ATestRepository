@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:id="0x7f070000"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="0x7f06000b" />
+
+    <RelativeLayout
+        android:id="0x7f070001"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:id="0x7f070002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="0x7f020007"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:textSize="26sp"
+            android:textColor="0x7f050000"
+            android:gravity="11"
+            android:id="0x7f070003"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="0x7f070002"
+            android:layout_centerHorizontal="true"
+            android:lineSpacingExtra="10dp" />
+
+        <TextView
+            android:textSize="20sp"
+            android:gravity="11"
+            android:id="0x7f070004"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="0x7f070003"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:gravity="11"
+            android:id="0x7f070005"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_below="0x7f070004"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:textSize="14sp"
+        android:textColor="0x7f050002"
+        android:gravity="1"
+        android:id="0x7f070006"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingMultiplier="1.5" />
+
+</RelativeLayout>

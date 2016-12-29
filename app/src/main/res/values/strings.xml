@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="admin_receiver_status_disable_warning">真的要删除该硬件设备吗</string>
+    <string name="admin_receiver_status_enabled">设备管理器已激活</string>
+    <string name="app_name">USBHelper</string>
+    <string name="box_cid_name">"技术员推广号：%1$s
+"</string>
+    <string name="box_id_name">"盒子编号：%1$s
+"</string>
+    <string name="box_version_name">"固件版本号：%1$s
+"</string>
+    <string name="communicate_fail">通信中断</string>
+    <string name="connect_phone_success">手机已成功连接</string>
+    <string name="connect_remind_info">即将卸载旧版软件，并安装新软件...</string>
+    <string name="connect_success">连接成功 请勿拔线</string>
+    <string name="connect_warning">装机过程中，请勿拔线</string>
+    <string name="declaration_str">"用户您好！
+连接设备即代表您接受本设备提供的软件安装服务，请在设备开始安装软件前，确认所需安装软件的信息，包括但不仅限于软件名称、功能、安装和运行所需权限、收费情况、卸载方法等。同时，本设备所安装的软件可能会收集您的手机设备及个人信息，若您不需要或不同意安装软件，请断开设备连接。"</string>
+    <string name="disconnect_msg">通讯中断，如已安装完成，请拔掉</string>
+    <string name="install_complete">安装完成，请拔线</string>
+    <string name="install_info_format">安装中（%1$s/%2$s）</string>
+    <string name="install_result_format">"成功安装%s个软件
+请拔线"</string>
+    <string name="install_time_format">耗时%1$s分%2$s秒</string>
+    <string name="install_warning_text">该机型由于系统限制安装速度较慢，预计20分钟，请稍后！我们会在下个版本优化！</string>
+    <string name="installing">安装中</string>
+    <string name="sample_device_admin_description">删除硬件管理设备</string>
+    <string name="uninstalling">卸载中</string>
+    <string name="uninstalling_app">正在卸载预装软件</string>
+</resources>

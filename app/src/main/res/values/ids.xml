@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tv_declaration">false</item>
+    <item type="id" name="rl_main_view">false</item>
+    <item type="id" name="iv_install_status_info">false</item>
+    <item type="id" name="tv_install_status_title_msg">false</item>
+    <item type="id" name="tv_install_status_content_msg">false</item>
+    <item type="id" name="tv_install_status_warning_msg">false</item>
+    <item type="id" name="tv_install_time">false</item>
+    <item type="id" name="tv_toast">false</item>
+</resources>

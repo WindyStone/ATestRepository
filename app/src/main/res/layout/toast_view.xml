@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="1"
+    android:background="0x7f020009"
+    android:layout_width="-1"
+    android:layout_height="-1"
+    android:keepScreenOn="true">
+
+    <TextView
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:id="0x7f070007"
+        android:layout_width="-2"
+        android:layout_height="-2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+</LinearLayout>
