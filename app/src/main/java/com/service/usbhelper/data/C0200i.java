@@ -9,7 +9,7 @@ import android.text.TextUtils;
 import com.service.usbhelper.MyApplication;
 import com.service.usbhelper.p009a.C0171i;
 import com.service.usbhelper.p015e.C0217f;
-import com.service.usbhelper.p015e.C0223l;
+import com.service.usbhelper.p015e.DeviceUtils;
 import com.service.usbhelper.p015e.Logooo;
 import com.service.usbhelper.p015e.SharedPreferencesManager;
 import com.service.usbhelper.p015e.C0229r;
@@ -111,16 +111,16 @@ public class C0200i {
                 }
                 f = C0229r.m538f(str);
                 jSONObject = new JSONObject();
-                if (C0223l.m498b()) {
-                    jSONObject.put("yun_os_version", C0223l.m499c());
+                if (DeviceUtils.m498b()) {
+                    jSONObject.put("yun_os_version", DeviceUtils.m499c());
                 }
-                c = C0223l.getUuid(MyApplication.getCt());
+                c = DeviceUtils.getUuid(MyApplication.getCt());
                 str3 = "uuid";
                 if (c == null) {
                     c = "";
                 }
                 jSONObject.put(str3, c);
-                c = C0223l.m502d(context);
+                c = DeviceUtils.m502d(context);
                 str3 = "android_id";
                 if (c == null) {
                     c = "";
@@ -180,16 +180,16 @@ public class C0200i {
             }
             f = C0229r.m538f(str);
             jSONObject = new JSONObject();
-            if (C0223l.m498b()) {
-                jSONObject.put("yun_os_version", C0223l.m499c());
+            if (DeviceUtils.m498b()) {
+                jSONObject.put("yun_os_version", DeviceUtils.m499c());
             }
-            c = C0223l.getUuid(MyApplication.getCt());
+            c = DeviceUtils.getUuid(MyApplication.getCt());
             str3 = "uuid";
             if (c == null) {
                 c = "";
             }
             jSONObject.put(str3, c);
-            c = C0223l.m502d(context);
+            c = DeviceUtils.m502d(context);
             str3 = "android_id";
             if (c == null) {
                 c = "";
@@ -249,16 +249,16 @@ public class C0200i {
         f = C0229r.m538f(str);
         jSONObject = new JSONObject();
         try {
-            if (C0223l.m498b()) {
-                jSONObject.put("yun_os_version", C0223l.m499c());
+            if (DeviceUtils.m498b()) {
+                jSONObject.put("yun_os_version", DeviceUtils.m499c());
             }
-            c = C0223l.getUuid(MyApplication.getCt());
+            c = DeviceUtils.getUuid(MyApplication.getCt());
             str3 = "uuid";
             if (c == null) {
                 c = "";
             }
             jSONObject.put(str3, c);
-            c = C0223l.m502d(context);
+            c = DeviceUtils.m502d(context);
             str3 = "android_id";
             if (c == null) {
                 c = "";
@@ -314,7 +314,7 @@ public class C0200i {
 
     private static C0199h m419c(Context context) {
         C0199h c0199h = new C0199h();
-        c0199h.f226d = C0223l.getUid(context);
+        c0199h.f226d = DeviceUtils.getUid(context);
         if (TextUtils.isEmpty(c0199h.f226d)) {
             c0199h.f226d = "";
         }
@@ -322,7 +322,7 @@ public class C0200i {
         if (TextUtils.isEmpty(c0199h.f229g)) {
             c0199h.f229g = "";
         }
-        c0199h.f224b = C0223l.getImei(context);
+        c0199h.f224b = DeviceUtils.getImei(context);
         if (TextUtils.isEmpty(c0199h.f224b)) {
             c0199h.f224b = "";
         }
@@ -330,7 +330,7 @@ public class C0200i {
         if (TextUtils.isEmpty(c0199h.f223a)) {
             c0199h.f223a = "";
         }
-        c0199h.f225c = C0223l.getMac();
+        c0199h.f225c = DeviceUtils.getMac();
         if (TextUtils.isEmpty(c0199h.f225c)) {
             c0199h.f225c = "";
         }

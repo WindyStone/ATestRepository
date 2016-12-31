@@ -15,7 +15,7 @@ import java.util.Enumeration;
 import java.util.Locale;
 
 /* renamed from: com.service.usbhelper.e.l */
-public class C0223l {
+public class DeviceUtils {
     public static String getMac() {
         String trim;
         Context context = MyApplication.getCt();
@@ -40,7 +40,7 @@ public class C0223l {
             trim = "";
         }
         if ("020000000000".equals(trim)) {
-            trim = C0223l.getHardwareAddress();
+            trim = DeviceUtils.getHardwareAddress();
         }
         return trim == null ? "" : trim.trim();
     }
@@ -77,9 +77,9 @@ public class C0223l {
         String random = String.valueOf(Math.random());
         if (random.contains(".")) {
             String[] split = random.split("\\.");
-            random = (split == null || split.length < 2 || split[1].length() <= i) ? C0223l.m496a("", i) : split[1].substring(split[1].length() - i, split[1].length());
+            random = (split == null || split.length < 2 || split[1].length() <= i) ? DeviceUtils.m496a("", i) : split[1].substring(split[1].length() - i, split[1].length());
         } else {
-            random = random.length() > i ? random.substring(random.length() - i, random.length()) : C0223l.m496a("", i);
+            random = random.length() > i ? random.substring(random.length() - i, random.length()) : DeviceUtils.m496a("", i);
         }
         return str + random;
     }
@@ -92,11 +92,11 @@ public class C0223l {
                 uid = sp.getString("uid", "");
             }
             if (TextUtils.isEmpty(uid)) {
-                uid = C0223l.getImei(context);
+                uid = DeviceUtils.getImei(context);
                 if (TextUtils.isEmpty(uid)) {
-                    uid = C0223l.getMac();
+                    uid = DeviceUtils.getMac();
                     if (TextUtils.isEmpty(uid)) {
-                        uid = C0223l.m496a("#", 14);
+                        uid = DeviceUtils.m496a("#", 14);
                     }
                 }
                 if (!(TextUtils.isEmpty(uid) || sp == null)) {
@@ -157,10 +157,10 @@ public class C0223l {
                 return systemUuid.substring(5, length);
             }
         }
-        systemUuid = C0223l.getImei(context);
-        String sim = C0223l.getSimOperator(context);
+        systemUuid = DeviceUtils.getImei(context);
+        String sim = DeviceUtils.getSimOperator(context);
         //sim = "TJUUIDENCODEKEY1";
-        systemUuid = AESEncryptUtil.getAESEncrypt(sim, systemUuid + sim + C0223l.m502d(context) + C0223l.getMac().replaceAll(":", "").replaceAll("\\.", "").toLowerCase(Locale.US));
+        systemUuid = AESEncryptUtil.getAESEncrypt(sim, systemUuid + sim + DeviceUtils.m502d(context) + DeviceUtils.getMac().replaceAll(":", "").replaceAll("\\.", "").toLowerCase(Locale.US));
         if (systemUuid != null) {
             try {
                 C0229r.m530c(systemUuid);

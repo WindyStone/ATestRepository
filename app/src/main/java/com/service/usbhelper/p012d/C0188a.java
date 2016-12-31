@@ -7,8 +7,8 @@ import android.os.Build.VERSION;
 import android.text.TextUtils;
 import com.service.usbhelper.MyApplication;
 import com.service.usbhelper.p015e.C0217f;
-import com.service.usbhelper.p015e.C0222k;
-import com.service.usbhelper.p015e.C0223l;
+import com.service.usbhelper.p015e.DateUtils;
+import com.service.usbhelper.p015e.DeviceUtils;
 import com.service.usbhelper.p015e.Logooo;
 import com.service.usbhelper.p015e.C0229r;
 import org.json.JSONException;
@@ -70,8 +70,8 @@ public class C0188a {
         if (TextUtils.isEmpty(b.m372a())) {
             return "";
         }
-        int a2 = C0222k.m491a();
-        Object b2 = C0223l.getUid(a);
+        int a2 = DateUtils.m491a();
+        Object b2 = DeviceUtils.getUid(a);
         if (TextUtils.isEmpty(b2)) {
             b2 = "";
         }
@@ -86,7 +86,7 @@ public class C0188a {
         if (TextUtils.isEmpty(h)) {
             h = "";
         }
-        Object a4 = C0223l.getImei(a);
+        Object a4 = DeviceUtils.getImei(a);
         if (TextUtils.isEmpty(a4)) {
             a4 = "";
         }
@@ -94,7 +94,7 @@ public class C0188a {
         if (TextUtils.isEmpty(d)) {
             d = "";
         }
-        Object a5 = C0223l.getMac();
+        Object a5 = DeviceUtils.getMac();
         if (TextUtils.isEmpty(a5)) {
             a5 = "";
         }
@@ -125,16 +125,16 @@ public class C0188a {
             jSONObject.put("default_status", b.m380e());
             jSONObject.put("usbhelp_version", h2);
             jSONObject.put("usbhelp_versioncode", valueOf);
-            if (C0223l.m498b()) {
-                jSONObject.put("yun_os_version", C0223l.m499c());
+            if (DeviceUtils.m498b()) {
+                jSONObject.put("yun_os_version", DeviceUtils.m499c());
             }
-            Object c = C0223l.getUuid(MyApplication.getCt());
+            Object c = DeviceUtils.getUuid(MyApplication.getCt());
             h2 = "uuid";
             if (c == null) {
                 c = "";
             }
             jSONObject.put(h2, c);
-            c = C0223l.m502d(a);
+            c = DeviceUtils.m502d(a);
             String str = "android_id";
             if (c == null) {
                 c = "";

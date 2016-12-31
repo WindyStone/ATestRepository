@@ -5,7 +5,7 @@ import android.os.Process;
 import android.text.TextUtils;
 import com.service.usbhelper.data.C0192a;
 import com.service.usbhelper.p011c.C0183h;
-import com.service.usbhelper.p015e.C0222k;
+import com.service.usbhelper.p015e.DateUtils;
 import com.service.usbhelper.p015e.EncryptUtil;
 import com.service.usbhelper.p015e.EncryptionUtil;
 import com.service.usbhelper.p015e.Logooo;
@@ -49,8 +49,8 @@ public class UncaughtExceptionThread extends Thread {
         JSONArray error = new JSONArray();
         try {
             JSONObject object = new JSONObject();
-            object.put("date", C0222k.m493a(System.currentTimeMillis(), "yyyy-MM-dd"));
-            object.put("time", C0222k.m493a(System.currentTimeMillis(), "HH:mm:ss"));
+            object.put("date", DateUtils.dateFormat(System.currentTimeMillis(), "yyyy-MM-dd"));
+            object.put("time", DateUtils.dateFormat(System.currentTimeMillis(), "HH:mm:ss"));
             object.put("msg", msg);
             object.put("msgMD5", md5);
             error.put(object);

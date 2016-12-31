@@ -9,8 +9,8 @@ import android.text.TextUtils;
 import com.service.usbhelper.MyApplication;
 import com.service.usbhelper.db.p013a.C0209b;
 import com.service.usbhelper.p015e.C0217f;
-import com.service.usbhelper.p015e.C0222k;
-import com.service.usbhelper.p015e.C0223l;
+import com.service.usbhelper.p015e.DateUtils;
+import com.service.usbhelper.p015e.DeviceUtils;
 import com.service.usbhelper.p015e.Logooo;
 import com.service.usbhelper.p015e.SharedPreferencesManager;
 import com.service.usbhelper.p015e.C0229r;
@@ -85,8 +85,8 @@ public class C0163a {
 
     public String m263a() {
         Context a = MyApplication.getCt();
-        int a2 = C0222k.m491a();
-        CharSequence b = C0223l.getUid(a);
+        int a2 = DateUtils.m491a();
+        CharSequence b = DeviceUtils.getUid(a);
         if (TextUtils.isEmpty(b)) {
             Object obj = "";
         } else {
@@ -107,7 +107,7 @@ public class C0163a {
         } else {
             CharSequence charSequence3 = b;
         }
-        b = C0223l.getImei(a);
+        b = DeviceUtils.getImei(a);
         if (TextUtils.isEmpty(b)) {
             Object obj4 = "";
         } else {
@@ -119,7 +119,7 @@ public class C0163a {
         } else {
             CharSequence charSequence5 = b;
         }
-        b = C0223l.getMac();
+        b = DeviceUtils.getMac();
         if (TextUtils.isEmpty(b)) {
             Object obj6 = "";
         } else {
@@ -170,16 +170,16 @@ public class C0163a {
                         jSONArray.put(jSONObject2);
                     }
                     jSONObject.put("app_arrive_list", jSONArray);
-                    if (C0223l.m498b()) {
-                        jSONObject.put("yun_os_version", C0223l.m499c());
+                    if (DeviceUtils.m498b()) {
+                        jSONObject.put("yun_os_version", DeviceUtils.m499c());
                     }
-                    Object c = C0223l.getUuid(MyApplication.getCt());
+                    Object c = DeviceUtils.getUuid(MyApplication.getCt());
                     valueOf = "uuid";
                     if (c == null) {
                         c = "";
                     }
                     jSONObject.put(valueOf, c);
-                    c = C0223l.m502d(a);
+                    c = DeviceUtils.m502d(a);
                     String str = "android_id";
                     if (c == null) {
                         c = "";

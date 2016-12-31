@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Build.VERSION;
 import android.text.TextUtils;
-import com.service.usbhelper.p015e.C0223l;
+import com.service.usbhelper.p015e.DeviceUtils;
 import com.service.usbhelper.p015e.C0229r;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,7 +12,7 @@ import org.json.JSONObject;
 /* renamed from: com.service.usbhelper.data.f */
 public class C0197f {
     public static JSONObject m408a(Context context) {
-        Object a = C0223l.getImei(context);
+        Object a = DeviceUtils.getImei(context);
         if (TextUtils.isEmpty(a)) {
             a = "";
         }
@@ -20,7 +20,7 @@ public class C0197f {
         if (TextUtils.isEmpty(d)) {
             d = "";
         }
-        Object a2 = C0223l.getMac();
+        Object a2 = DeviceUtils.getMac();
         if (TextUtils.isEmpty(a2)) {
             a2 = "";
         }

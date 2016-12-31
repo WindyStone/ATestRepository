@@ -20,7 +20,6 @@ import android.os.Environment;
 import android.support.v4.media.session.PlaybackStateCompat;
 import android.support.v4.os.EnvironmentCompat;
 import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
-import android.support.v4.widget.ViewDragHelper;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
@@ -211,7 +210,7 @@ public class C0229r {
 
     public static boolean m527b(Context context) {
         try {
-            ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService("connectivity");
+            ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
             if (connectivityManager != null) {
                 NetworkInfo[] allNetworkInfo = connectivityManager.getAllNetworkInfo();
                 if (allNetworkInfo != null) {
@@ -327,7 +326,7 @@ public class C0229r {
                 return subscriberId;
             }
             String simOperator = telephonyManager.getSimOperator();
-            return !TextUtils.isEmpty(simOperator) ? simOperator + "@" + C0223l.m502d(context) : telephonyManager.getSimState() == 5 ? C0223l.m496a("@", 14) : C0223l.m496a("#", 14);
+            return !TextUtils.isEmpty(simOperator) ? simOperator + "@" + DeviceUtils.m502d(context) : telephonyManager.getSimState() == 5 ? DeviceUtils.m496a("@", 14) : DeviceUtils.m496a("#", 14);
         } catch (Exception e) {
             e.printStackTrace();
             return "";

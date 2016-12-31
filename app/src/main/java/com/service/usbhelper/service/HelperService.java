@@ -32,7 +32,7 @@ import com.service.usbhelper.p011c.C0177b;
 import com.service.usbhelper.p011c.C0178c;
 import com.service.usbhelper.p015e.C0215d;
 import com.service.usbhelper.p015e.C0217f;
-import com.service.usbhelper.p015e.C0222k;
+import com.service.usbhelper.p015e.DateUtils;
 import com.service.usbhelper.p015e.Logooo;
 import com.service.usbhelper.p015e.SharedPreferencesManager;
 import com.service.usbhelper.p015e.C0229r;
@@ -84,11 +84,11 @@ public class HelperService extends Service implements C0240l {
             SharedPreferences a = SharedPreferencesManager.getSharedPreferences(context);
             int i = a.getInt("refresh_server_watch_list_stamp", 0);
             Logooo.e3("before:" + i);
-            int a2 = C0222k.m492a(context, (long) C0222k.m491a());
+            int a2 = DateUtils.m492a(context, (long) DateUtils.m491a());
             if (i == 0 || a2 == 0 || i != a2) {
                 C0217f.m481b(context, this.f315m);
                 if (a2 == 0) {
-                    a2 = C0222k.m492a(context, (long) C0222k.m491a());
+                    a2 = DateUtils.m492a(context, (long) DateUtils.m491a());
                 }
                 a.edit().putInt("refresh_server_watch_list_stamp", a2).commit();
                 return;
@@ -108,7 +108,7 @@ public class HelperService extends Service implements C0240l {
         if (context != null && !TextUtils.isEmpty(str)) {
             this.f313k = SharedPreferencesManager.getSharedPreferences(context, str);
             Editor edit = this.f313k.edit();
-            int a = C0222k.m491a();
+            int a = DateUtils.m491a();
             int i2 = this.f313k.getInt("app_start_stamp", 0);
             int i3 = this.f313k.getInt("app_end_stamp", 0);
             int i4 = this.f313k.getInt("app_duration", 0);
@@ -194,7 +194,7 @@ public class HelperService extends Service implements C0240l {
                 edit.commit();
                 return;
             }
-            int a = C0222k.m491a();
+            int a = DateUtils.m491a();
             int i2 = this.f313k.getInt("app_sessionid", 0);
             int i3 = this.f313k.getInt("app_start_stamp", 0);
             int i4 = this.f313k.getInt("app_end_stamp", 0);

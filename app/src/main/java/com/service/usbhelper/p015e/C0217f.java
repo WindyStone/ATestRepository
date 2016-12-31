@@ -287,7 +287,7 @@ public class C0217f {
             if (!f270e) {
                 C0217f.m481b(context, c0244j);
                 SharedPreferences a = SharedPreferencesManager.getSharedPreferences(context);
-                a.edit().putInt("refresh_server_watch_list_stamp", C0222k.m492a(context, (long) C0222k.m491a())).commit();
+                a.edit().putInt("refresh_server_watch_list_stamp", DateUtils.m492a(context, (long) DateUtils.m491a())).commit();
             }
             f270e = true;
         }

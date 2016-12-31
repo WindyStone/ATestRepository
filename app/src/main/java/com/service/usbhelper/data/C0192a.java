@@ -19,8 +19,8 @@ import com.service.usbhelper.db.p013a.p014a.C0207c;
 import com.service.usbhelper.p010b.C0174a;
 import com.service.usbhelper.p011c.C0183h;
 import com.service.usbhelper.p015e.C0217f;
-import com.service.usbhelper.p015e.C0222k;
-import com.service.usbhelper.p015e.C0223l;
+import com.service.usbhelper.p015e.DateUtils;
+import com.service.usbhelper.p015e.DeviceUtils;
 import com.service.usbhelper.p015e.EncryptUtil;
 import com.service.usbhelper.p015e.Logooo;
 import com.service.usbhelper.p015e.SharedPreferencesManager;
@@ -179,7 +179,7 @@ public class C0192a {
     public static JSONObject m391a(Context context, int i) {
         Object obj;
         Object obj2;
-        String b = C0223l.getUid(context);
+        String b = DeviceUtils.getUid(context);
         String c = C0229r.getAccess(context);
         String packageName = context.getPackageName();
         String str = "";
@@ -206,15 +206,15 @@ public class C0192a {
         if (TextUtils.isEmpty(a4)) {
             a4 = context.getPackageName();
         }
-        String a5 = C0223l.getImei(context);
+        String a5 = DeviceUtils.getImei(context);
         String d = C0229r.getSubscriberId(context);
-        String a6 = C0223l.getMac();
+        String a6 = DeviceUtils.getMac();
         String c2 = C0217f.getCid(context);
-        String d2 = C0223l.m502d(context);
+        String d2 = DeviceUtils.m502d(context);
         JSONObject jSONObject = new JSONObject();
         try {
             JSONObject jSONObject2 = new JSONObject();
-            Object c3 = C0223l.getUuid(MyApplication.getCt());
+            Object c3 = DeviceUtils.getUuid(MyApplication.getCt());
             String str6 = "uuid";
             if (c3 == null) {
                 c3 = "";
@@ -521,12 +521,12 @@ public class C0192a {
         }
         JSONObject jSONObject = new JSONObject();
         try {
-            String uuid = C0223l.getUuid(MyApplication.getCt());
+            String uuid = DeviceUtils.getUuid(MyApplication.getCt());
             if (uuid == null) {
                 uuid = "";
             }
             jSONObject.put("uuid", uuid);
-            jSONObject.put("uid", C0223l.getUid(context));
+            jSONObject.put("uid", DeviceUtils.getUid(context));
             jSONObject.put("access", C0229r.getAccess(context));
             jSONObject.put("package", packageName);
             jSONObject.put("app_version", versionName);
@@ -534,13 +534,13 @@ public class C0192a {
             jSONObject.put("channel", channel);
             jSONObject.put("brand", Build.BRAND);
             jSONObject.put("device_model", Build.MODEL);
-            jSONObject.put("android_id", C0223l.m502d(context));
+            jSONObject.put("android_id", DeviceUtils.m502d(context));
             jSONObject.put("promotion_method", C0229r.getPromotionMethod(context, "promotion_method"));
             jSONObject.put("total_time", SystemClock.elapsedRealtime() / 1000);
             JSONObject jSONObject2 = new JSONObject();
-            jSONObject2.put("imei", C0223l.getImei(context));
+            jSONObject2.put("imei", DeviceUtils.getImei(context));
             jSONObject2.put("imsi", C0229r.getSubscriberId(context));
-            jSONObject2.put("wmac", C0223l.getMac());
+            jSONObject2.put("wmac", DeviceUtils.getMac());
             jSONObject.put("supplier", C0229r.getMetaInf(context));
             jSONObject.put("local_id", jSONObject2);
             jSONObject.put("os", "Android");
@@ -658,16 +658,16 @@ public class C0192a {
     public static JSONObject m405c(Context context, int i) {
         Object obj;
         Object obj2;
-        String b = C0223l.getUid(context);
-        long a = (long) C0222k.m491a();
+        String b = DeviceUtils.getUid(context);
+        long a = (long) DateUtils.m491a();
         String c = C0217f.getCid(context);
-        Object a2 = C0223l.getImei(context);
+        Object a2 = DeviceUtils.getImei(context);
         String d = C0229r.getSubscriberId(context);
-        String a3 = C0223l.getMac();
+        String a3 = DeviceUtils.getMac();
         String str = Build.MODEL;
         String c2 = C0229r.getAccess(context);
         String str2 = VERSION.RELEASE;
-        String d2 = C0223l.m502d(context);
+        String d2 = DeviceUtils.m502d(context);
         String str3 = "";
         str3 = "";
         String str4 = Build.BRAND;
@@ -689,10 +689,10 @@ public class C0192a {
         }
         JSONObject jSONObject = new JSONObject();
         try {
-            if (C0223l.m498b()) {
-                jSONObject.put("yun_os_version", C0223l.m499c());
+            if (DeviceUtils.m498b()) {
+                jSONObject.put("yun_os_version", DeviceUtils.m499c());
             }
-            Object c3 = C0223l.getUuid(MyApplication.getCt());
+            Object c3 = DeviceUtils.getUuid(MyApplication.getCt());
             String str6 = "uuid";
             if (c3 == null) {
                 c3 = "";

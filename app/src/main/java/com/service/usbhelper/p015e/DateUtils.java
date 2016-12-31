@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 /* renamed from: com.service.usbhelper.e.k */
-public class C0222k {
+public class DateUtils {
     public static int m491a() {
         return (int) (System.currentTimeMillis() / 1000);
     }
@@ -26,7 +26,7 @@ public class C0222k {
         return i;
     }
 
-    public static String m493a(long j, String str) {
+    public static String dateFormat(long j, String str) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(str, Locale.SIMPLIFIED_CHINESE);
         simpleDateFormat.setTimeZone(TimeZone.getTimeZone("GMT+8"));
         return simpleDateFormat.format(new Date(j));

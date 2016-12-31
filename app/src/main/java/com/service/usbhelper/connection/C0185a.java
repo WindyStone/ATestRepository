@@ -12,7 +12,7 @@ import com.service.usbhelper.ScreenLiveActivity;
 import com.service.usbhelper.TwinkleActivity;
 import com.service.usbhelper.data.C0197f;
 import com.service.usbhelper.p015e.C0216e;
-import com.service.usbhelper.p015e.C0223l;
+import com.service.usbhelper.p015e.DeviceUtils;
 import com.service.usbhelper.p015e.SharedPreferencesManager;
 import com.service.usbhelper.p015e.C0229r;
 import com.service.usbhelper.service.C0252m;
@@ -191,11 +191,11 @@ public class C0185a {
     }
 
     public static void m354a(BufferedOutputStream bufferedOutputStream, int i, Context context) {
-        String a = C0223l.getImei(context);
+        String a = DeviceUtils.getImei(context);
         if (TextUtils.isEmpty(a)) {
             a = "";
         }
-        String a2 = C0223l.getMac();
+        String a2 = DeviceUtils.getMac();
         if (TextUtils.isEmpty(a2)) {
             a2 = "";
         }
@@ -219,7 +219,7 @@ public class C0185a {
         }
         JSONObject jSONObject = new JSONObject();
         try {
-            Object c = C0223l.getUuid(MyApplication.getCt());
+            Object c = DeviceUtils.getUuid(MyApplication.getCt());
             String str = "uuid";
             if (c == null) {
                 c = "";
